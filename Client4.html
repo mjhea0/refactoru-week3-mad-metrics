@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Client 4 Mad Metrics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="main.css" rel="stylesheet" media="screen">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="MadMetrics.js"></script>
+    <script src="jquery.colorbox-min.js"></script>
+    <style>
+      body {
+        margin-top: 125px; /* adjust this if the height of the menu bar changes */
+      }
+
+      .nav {
+        margin-top: 28px; /* this is a faux center fix for the nav options - adjust this if you wish to change the logo height or the font of the menu items */
+      }
+    </style>
+  </head>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+          <a class="navbar-brand logo-nav" href="#"><img src="http://placehold.it/150x75&text=HI!"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about" class="sign_up">Sign-Up</a></li>
+            <li><a href="#services" class="exit">Faux Exit</a></li>
+            <li><a class="metrics" href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Metrics</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12">
+        <div class="hundreds">
+          <h3>Directions:</h3>
+          <ol>
+            <li>Scroll down, up, down, up ... </li>
+            <li>Click sign-up (time until user converts)</li>
+            <li>Click Exit (stops timer for time spent on page)</li>
+          </ol>
+          <br/>
+          
+          <div id="light" class="white_content"><a class="close" href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a><br/><br/><p class="test"></p></div>
+        <div id="fade" class="black_overlay"></div>
+        <p>
+        Ludwig Wittgenstein
+
+        On Certainty (Uber Gewissheit)
+
+        ed. G.E.M.Anscombe and G.H.von Wright
+        Translated by Denis Paul and G.E.M.Anscombe
+        Basil Blackwell, Oxford 1969-1975
+
+        Preface
+
+        What we publish here belongs to the last year and a half of Wittgenstein's life. In the middle of 1949 he visited the United States at the invitation of Norman Malcolm, staying at Malcolm's house in Ithaca. Malcolm acted as a goad to his interest in Moore's 'defence of common sense', that is to say his claim to know a number of propositions for sure, such as "Here is one hand, and here is another", and "The earth existed for a long time before my birth", and "I have never been far from the earth's surface". The first of these comes in Moore's 'Proof of the External World'. The two others are in his 'Defence of Common Sense'; Wittgenstein had long been interested in these and had said to Moore that this was his best article. Moore had agreed. This book contains the whole of what Wittgenstein wrote on this topic from that time until his death. It is all first-draft material, which he did not live to excerpt and polish.
+
+        The material falls into four parts; we have shown the divisions at #65, #192, #299. What we believe to be the first part was written on twenty loose sheets of lined foolscap, undated. These Wittgenstein left in his room in G.E.M.Anscombe's house in Oxford, where he lived (apart from a visit to Norway in the autumn) from April 1950 to February 1951. I (G.E.M.A.) am under the impression that he had written them in Vienna, where he stayed from the previous Christmas until March; but I cannot now recall the basis of this impression. The rest is in small notebooks, containing dates; towards the end, indeed, the date of writing is always given. The last entry is two days before his death on April 29th 1951. We have left the dates exactly as they appear in the manuscripts. The numbering of the single sections, however, is by the Editors.
+
+        It seemed appropriate to publish this work by itself. It is not a selection; Wittgenstein marked it off in his notebooks as a separate topic, which he apparently took up at four separate periods during this eighteen months. It constitutes a single sustained treatment of the topic.
+
+        G.E.M. Anscombe 
+        G.H. von Wright
+
+
+
+
+        1. If you do know that here is one hand, we'll grant you all the rest.
+        When one says that such and such a proposition can't be proved, of course that does not mean that it can't be derived from other propositions; any proposition can be derived from other ones. But they may be no more certain than it is itself. (On this a curious remark by H.Newman.)
+
+        2. From its seeming to me - or to everyone - to be so, it doesn't follow that it is so.
+        What we can ask is whether it can make sense to doubt it.
+
+        3. If e.g. someone says "I don't know if there's a hand here" he might be told "Look closer". - This possibility of satisfying oneself is part of the language-game. Is one of its essential features.
+
+        4. "I know that I am a human being." In order to see how unclear the sense of this proposition is, consider its negation. At most it might be taken to mean "I know I have the organs of a human". (E.g. a brain which, after all, no one has ever yet seen.) But what about such a proposition as "I know I have a brain"? Can I doubt it? Grounds for doubt are lacking! Everything speaks in its favour, nothing against it. Nevertheless it is imaginable that my skull should turn out empty when it was operated on.
+
+        5. Whether a proposition can turn out false after all depends on what I make count as determinants for that proposition.
+
+        6. Now, can one enumerate what one knows (like Moore)? Straight off like that, I believe not. - For otherwise the expression "I know" gets misused. And through this misuse a queer and extremely important mental state seems to be revealed.
+
+        7. My life shows that I know or am certain that there is a chair over there, or a door, and so on. - I tell a friend e.g. "Take that chair over there", "Shut the door", etc. etc.
+
+        8. The difference between the concept of 'knowing' and the concept of 'being certain' isn't of any great importance at all, except where "I know" is meant to mean: I can't be wrong. In a law-court, for example, "I am certain" could replace "I know" in every piece of testimony. We might even imagine its being forbidden to say "I know" there. [A passage in "Wilhelm Meister", where "You know" or "You knew" is used in the sense "You were certain", the facts being different from what he knew.]
+
+        9. Now do I, in the course of my life, make sure I know that here is a hand - my own hand, that is?
+
+        10. I know that a sick man is lying here? Nonsense! I am sitting at his bedside, I am looking attentively into his face. - So I don't know, then, that there is a sick man lying here? Neither the question nor the assertion makes sense. Any more than the assertion "I am here", which I might yet use at any moment, if suitable occasion presented itself. - Then is "2x2=4" nonsense in the same way, and not a proposition of arithmetic, apart from particular occasions? "2x2=4" is a true proposition of arithmetic - not "on particular occasions" nor "always" - but the spoken or written sentence "2x2=4" in Chinese might have a different meaning or be out and out nonsense, and from this is seen that it is only in use that the proposition has its sense. And "I know that there's a sick man lying here", used in an unsuitable situation, seems not to be nonsense but rather seems matter-of-course, only because one can fairly easily imagine a situation to fit it, and one thinks that the words "I know that..." are always in place where there is no doubt, and hence even where the expression of doubt would unintelligible.
+
+        11. We just do not see how very specialized the use of "I know" is.
+
+        12. - For "I know" seems to describe a state of affairs which guarantees what is known, guarantees it as a fact. One always forgets the expression "I thought I knew".
+
+        13. For it is not as though the proposition "It is so" could be inferred from someone else's utterance: "I know it is so". Nor from the utterance together with its not being a lie. - But can't I infer "It is so" from my own utterance "I know etc."? Yes; and also "There is a hand there" follows from the proposition "He knows that there's a hand there". But from his utterance "I know..." it does not follow that he does know it.
+
+        14. That he does know remains to be shown.
+
+        15. It needs to be shown that no mistake was possible. Giving the assurance "I know" doesn't suffice. For it is after all only an assurance that I can't be making a mistake, and it needs to be objectively established that I am not making a mistake about that.
+
+        16. "If I know something, then I also know that I know it, etc." amounts to: "I know that" means "I am incapable of being wrong about that." But whether I am so must admit of being established objectively.
+
+        17. Suppose now I say "I'm incapable of being wrong about this: that is a book" while I point to an object. What would a mistake here be like? And have I any clear idea of it?
+
+        18. "I know" often means: I have the proper grounds for my statement. So if the other person is acquainted with the language-game, he would admit that I know. The other, if he is acquainted with the language-game, must be able to imagine how one may know something of the kind.
+
+        19. The statement "I know that here is a hand" may then be continued: "for it's my hand that I'm looking at." Then a reasonable man will not doubt that I know. - Nor will the idealist; rather he will say that he was not dealing with the practical doubt which is being dismissed, but there is a further doubt behind that one. - That this is an illusion has to be shown in a different way.
+
+        20. "Doubting the existence of the external world" does not mean for example doubting the existence of a planet, which later observations proved to exist. - Or does Moore want to say that knowing that here is his hand is different in kind from knowing the existence of the planet Saturn? Otherwise it would be possible to point out the discovery of the planet Saturn to the doubters and say that its existence has been proved, and hence the existence of the external world as well.
+
+        21. Moore's view really comes down to this: the concept 'know' is analogous to the concepts 'believe', 'surmise', 'doubt', 'be convinced' in that the statement "I know..." can't be a mistake. And if that is so, then there can be an inference from such an utterance to the truth of an assertion. And here the form "I thought I knew" is being overlooked. - But if this latter is inadmissible, then a mistake in the assertion must be logically impossible too. And anyone who is acquainted with the language-game must realize this - an assurance from a reliable man that he knows cannot contribute anything.
+
+        22. It would surely be remarkable if we had to believe the reliable person who says "I can't be wrong"; or who says "I am not wrong".
+
+        23. If I don't know whether someone has two hands (say, whether they have been amputated or not) I shall believe his assurance that he has two hands, if he is trustworthy. And if he says he knows it, that can only signify to me that he has been able to make sure, and hence that his arms are e.g. not still concealed by coverings and bandages, etc.etc. My believing the trustworthy man stems from my admitting that it is possible for him to make sure. But someone who says that perhaps there are no physical objects makes no such admission.
+
+        24. The idealist's question would be something like: "What right have I not to doubt the existence of my hands?" (And to that the answer can't be: I know that they exist.) But someone who asks such a question is overlooking the fact that a doubt about existence only works in a language-game. Hence, that we should first have to ask: what would such a doubt be like?, and don't understand this straight off.
+
+        25. One may be wrong even about "there being a hand here". Only in particular circumstances is it impossible. - "Even in a calculation one can be wrong - only in certain circumstances one can't."
+
+        26. But can it be seen from a rule what circumstances logically exclude a mistake in the employment of rules of calculation?
+        What use is a rule to us here? Mightn't we (in turn) go wrong in applying it?
+
+        27. If, however, one wanted to give something like a rule here, then it would contain the expression "in normal circumstances". And we recognize normal circumstances but cannot precisely describe them. At most, we can describe a range of abnormal ones.
+
+        28. What is 'learning a rule'? - This.
+        What is 'making a mistake in applying it'? - This. And what is pointed to here is something indeterminate.
+
+        29. Practice in the use of the rule also shows what is a mistake in its employment.
+
+        30. When someone has made sure of something, he says: "Yes, the calculation is right", but he did not infer that from his condition of certainty. One does not infer how things are from one's own certainty.
+        Certainty is as it were a tone of voice in which one declares how things are, but one does not infer from the tone of voice that one is justified.
+
+        31. The propositions which one comes back to again and again as if bewitched - these I should like to expunge from philosophical language.
+
+        32. It's not a matter of Moore's knowing that there's a hand there, but rather we should not understand him if he were to say "Of course I may be wrong about this." We should ask "What is it like to make such a mistake as that?" - e.g. what's it like to discover that it was a mistake?
+
+        33. Thus we expunge the sentences that don't get us any further.
+
+        34. If someone is taught to calculate, is he also taught that he can rely on a calculation of his teacher's? But these explanations must after all sometime come to an end. Will he also be taught that he can trust his senses - since he is indeed told in many cases that in such and such a special case you cannot trust them? -
+        Rule and exception.
+
+        35. But can't it be imagined that there should be no physical objects? I don't know. And yet "There are physical objects" is nonsense. Is it supposed to be an empirical proposition? - 
+        And is this an empirical proposition: "There seem to be physical objects"?
+
+        36. "A is a physical object" is a piece of instruction which we give only to someone who doesn't yet understand either what "A" means, or what "physical object" means. Thus it is instruction about the use of words, and "physical object" is a logical concept. (Like colour, quantity,...) And that is why no such proposition as: "There are physical objects" can be formulated.
+        Yet we encounter such unsuccessful shots at every turn.
+
+        37. But is it adequate to answer to the scepticism of the idealist, or the assurances of the realist, to say that "There are physical objects" is nonsense? For them after all it is not nonsense. It would, however, be an answer to say: this assertion, or its opposite is a misfiring attempt to express what can't be expressed like that. And that it does misfire can be shown; but that isn't the end of the matter. We need to realize that what presents itself to us as the first expression of a difficulty, or of its solution, may as yet not be correctly expressed at all. Just as one who has a just censure of a picture to make will often at first offer the censure where it does not belong, and an investigation is needed in order to find the right point of attack for the critic.
+
+        38. Knowledge in mathematics: Here one has to keep on reminding oneself of the unimportance of the 'inner process' or 'state' and ask "Why should it be important? What does it matter to me?" What is interesting is how we use mathematical propositions.
+
+        39. This is how calculation is done, in such circumstances a calculation is treated as absolutely reliable, as certainly correct.
+
+        40. Upon "I know that there is my hand" there may follow the question "How do you know?" and the answer to that presupposes that this can be known in that way. So, instead of "I know that here is my hand", one might say "Here is my hand", and then add how one knows.
+
+        41. "I know where I am feeling pain", "I know that I feel it here" is as wrong as "I know that I am in pain". But "I know where you touched my arm" is right.
+
+        42. One can say "He believes it, but it isn't so", but not "He knows it, but it isn't so". Does this stem from the difference between the mental states of belief and knowledge? No. - One may for example call "mental state" what is expressed by tone of voice in speaking, by gestures etc. It would thus be possible to speak of a mental state of conviction, and that may be the same whether it is knowledge or false belief. To think that different states must correspond to the words "believe" and "know" would be as if one believed that different people had to correspond to the word "I" and the name "Ludwig", because the concepts are different.
+
+        43. What sort of proposition is this: "We cannot have miscalculated in 12x12=144"? It must surely be a proposition of logic. - But now, is it not the same, or doesn't it come to the same, as the statement 12x12=144?
+
+        44. If you demand a rule from which it follows that there can't have been a miscalculation here, the answer is that we did not learn this through a rule, but by learning to calculate.
+
+        45. We got to know the nature of calculating by learning to calculate.
+
+        46. But then can't it be described how we satisfy ourselves of the reliability of a calculation? O yes! Yet no rule emerges when we do so. - But the most important thing is: The rule is not needed. Nothing is lacking. We do calculate according to a rule, and that is enough.
+
+        47. This is how one calculates. Calculating is this. What we learn at school, for example. Forget this transcendent certainty, which is connected with your concept of spirit.
+
+        48. However, out of a host of calculations certain ones might be designated as reliable once for all, others as not yet fixed. And now, is this a logical distinction?
+
+        49. But remember: even when the calculation is something fixed for me, this is only a decision for a practical purpose.
+
+        50. When does one say, I know that ... x ... = ....? When one has checked the calculation.
+
+        51. What sort of proposition is: "What could a mistake here be like?" It would have to be a logical proposition. But is it a logic that is not used, because what it tells us is not taught by means of propositions. - It is a logical proposition; for it does describe the conceptual (linguistic) situation.
+
+        52. This situation is thus not the same for a proposition like "At this distance from the sun there is a planet" and "Here is a hand" (namely my own hand). The second can't be called a hypothesis. But there isn't a sharp boundary line between them.
+
+        53. So one might grant that Moore was right, if he is interpreted like this: a proposition saying that here is a physical object may have the same logical status as one saying that here is a red patch.
+
+        54. For it is not true that a mistake merely gets more and more improbable as we pass from the planet to my own hand. No: at some point it has ceased to be conceivable.
+        This is already suggested by the following: if it were not so, it would also be conceivable that we should be wrong in every statement about physical objects; that any we ever make are mistaken.
+
+        55. So is the hypothesis possible, that all the things around us don't exist? Would that not be like the hypothesis of our having miscalculated in all our calculations?
+
+        56. When one says: "Perhaps this planet doesn't exist and the light-phenomenon arises in some other way", then after all one needs an example of an object which does exist. This doesn't exist, - as for example does...
+        Or are we to say that certainty is merely a constructed point to which some things approximate more, some less closely? No. Doubt gradually loses its sense. This language-game just is like that.
+        And everything descriptive of a language-game is part of logic.
+
+        57. Now might not "I know, I am not just surmising, that here is my hand" be conceived as a proposition of grammar? Hence not temporally. -
+        But in that case isn't it like this one: "I know, I am not just surmising, that I am seeing red"?
+        And isn't the consequence "So there are physical objects" like: "So there are colours"?
+
+        58. If "I know etc" is conceived as a grammatical proposition, of course the "I" cannot be important. And it properly means "There is no such thing as a doubt in this case" or "The expression 'I do not know' makes no sense in this case". And of course it follows from this that "I know" makes no sense either.
+
+        59. "I know" is here a logical insight. Only realism can't be proved by means of it.
+
+        60. It is wrong to say that the 'hypothesis' that this is a bit of paper would be confirmed or disconfirmed by later experience, and that, in "I know that this is a bit of paper", the "I know" either relates to such an hypothesis or to a logical determination.
+
+        61. ...A meaning of a word is a kind of employment of it. 
+        For it is what we learn when the word is incorporated into our language.
+
+        62. That is why there exists a correspondence between the concepts 'rule' and 'meaning'.
+
+        63. If we imagine the facts otherwise than as they are, certain language-games lose some of their importance, while others become important. And in this way there is an alteration - a gradual one - in the use of the vocabulary of a language.
+
+        64. Compare the meaning of a word with the 'function' of an official. And 'different meanings' with 'different functions'.
+
+        65. When language-games change, then there is a change in concepts, and with the concepts the meanings of words change. 
+        _____________________
+
+        66. I make assertions about reality, assertions which have different degrees of assurance. How does the degree of assurance come out? What consequences has it?
+        We may be dealing, for example, with the certainty of memory, or again of perception. I may be sure of something, but still know what test might convince me of error. I am e.g. quite sure of the date of a battle, but if I should find a different date in a recognized work of history, I should alter my opinion, and this would not mean I lost all faith in judging.
+
+        67. Could we imagine a man who keeps on making mistakes where we regard a mistake as ruled out, and in fact never encounter one?
+        E.g. he says he lives in such and such a place, is so and so old, comes from such and such a city, and he speaks with the same certainty (giving all the tokens of it) as I do, but he is wrong.
+        But what is his relation to this error? What am I to suppose?
+
+        68. The question is: what is the logician to say here?
+
+        69. I should like to say: "If I am wrong about this, I have no guarantee that anything I say is true." But others won't say that about me, nor will I say it about other people.
+
+        70. For months I have lived at address A, I have read the name of the street and the number of the house countless times, have received countless letters here and given countless people the address. If I am wrong about it, the mistake is hardly less that if I were (wrongly) to believe I was writing Chinese and not German.
+
+        71. If my friend were to imagine one day that he had been living for a long time past in such and such a place, etc.etc., I should not call this a mistake, but rather a mental disturbance, perhaps a transient one.
+
+        72. Not every false belief of this sort is a mistake.
+
+        73. But what is the difference between mistake and mental disturbance? Or what is the difference between my treating it as a mistake and my treating it as mental disturbance?
+
+        74. Can we say: a mistake doesn't only have a cause, it also has a ground? I.e., roughly: when someone makes a mistake, this can be fitted into what he knows aright.
+
+        75. Would this be correct: If I merely believed wrongly that there is a table here in front of me, this might still be a mistake; but if I believe wrongly that I have seen this table, or one like it, every day for several months past, and have regularly used it, that isn't a mistake?
+
+        76. Naturally, my aim must be to give the statements that one would like to make here, but cannot make significantly.
+
+        77. Perhaps I shall do a multiplication twice to make sure, or perhaps get someone else to work it over. But shall I work it over again twenty times, or get twenty people to go over it? And is that some sort of negligence? Would the certainty really be greater for being checked twenty times?
+
+        78. And can I give a reason why it isn't?
+
+        79. That I am a man and not a woman can be verified, but if I were to say I was a woman, and then tried to explain the error by saying I hadn't checked the statement, the explanation would not be accepted.
+
+        80. The truth of my statements is the test of my understanding of these statements.
+
+        81. That is to say: if I make certain false statements, it becomes uncertain whether I understand them.
+
+        82. What counts as an adequate test of a statement belongs to logic. It belongs to the description of the language-game.
+
+        83. The truth of certain empirical propositions belongs to our frame of reference.
+
+        84. Moore says he knows that the earth existed long before his birth. And put like that it seems to be a personal statement about him, even if it is in addition a statement about the physical world. Now it is philosophically uninteresting whether Moore knows this or that, but it is interesting that, and how, it can be known. If Moore had informed us that he knew the distance separating certain stars, we might conclude from that that he had made some special investigations, and we shall want to know what these were. But Moore chooses precisely a case in which we all seem to know the same as he, and without being able to say how. I believe e.g. that I know as much about this matter (the existence of the earth) as Moore does, and if he knows that it is as he says, then I know it too. For it isn't, either, as if he had arrived at this proposition by pursuing some line of thought which, while it is open to me, I have not in fact pursued.
+
+        85. And what goes into someone's knowing this? Knowledge of history, say? He must know what it means to say: the earth has already existed for such and such a length of time. For not any intelligent adult must know that. We see men building and demolishing houses, and are led to ask:"How long has this house been here?" But how does one come on the idea of asking this about a mountain, for example? And have all men the notion of the earth as a body, which may come into being and pass away? Why shouldn't I think of the earth as flat, but extending without end in every direction (including depth)? But in that case one might still say "I know that this mountain existed long before my birth." - But suppose I met a man who didn't believe that?
+
+        86. Suppose I replaced Moore's "I know" by "I am of the unshakeable conviction"?
+
+        87. Can't an assertoric sentence, which was capable of functioning as an hypothesis, also be used as a foundation for research and action? I.e. can't it simply be isolated from doubt, though not according to any explicit rule? It simply gets assumed as a truism, never called in question, perhaps not even ever formulated.
+
+        88. It may be for example that all enquiry on our part is set so as to exempt certain propositions from doubt, if they were ever formulated. They lie apart from the route travelled by enquiry.
+
+        89. One would like to say: "Everything speaks for, and nothing against the earth's having existed long before..."
+        Yet might I not believe the contrary after all? But the question is: What would the practical effects of this belief be? - Perhaps someone says: "That's not the point. A belief is what it is whether it has any practical effects or not." One thinks: It is the same adjustment of the human mind anyway.
+
+        90. "I know" has a primitive meaning similar to and related to "I see" ("wissen", "videre"). And "I knew he was in the room, but he wasn't in the room" is like "I saw him in the room, but he wasn't there". "I know" is supposed to express a relation, not between me and the sense of a proposition (like "I believe") but between me and a fact. So that the fact is taken into my consciousness. (Here is the reason why one wants to say that nothing that goes on in the outer world is really known, but only what happens in the domain of what are called sense-data.) This would give us a picture of knowing as the perception of an outer event through visual rays which project it as it is into the eye and the consciousness. Only then the question at once arises whether one can be certain of this projection. And this picture does indeed show how our imagination presents knowledge, but not what lies at the bottom of this presentation.
+
+        91. If Moore says he knows the earth existed etc., most of us will grant him that it has existed all that time, and also believe him when he says he is convinced of it. But has he also got the right ground for this conviction? For if not, then after all he doesn't know (Russell).
+
+        92. However, we can ask: May someone have telling grounds for believing that the earth has only existed for a short time, say since his own birth? - Suppose he had always been told that, - would he have any good reason to doubt it? Men have believed that they could make the rain; why should not a king be brought up in the belief that the world began with him? And if Moore and this king were to meet and discuss, could Moore really prove his belief to be the right one? I do not say that Moore could not convert the king to his view, but it would be a conversion of a special kind; the king would be brought to look at the world in a different way.
+        Remember that one is sometimes convinced of the correctness of a view by its simplicity or symmetry, i.e., these are what induce one to go over to this point of view. One then simply says something like: "That's how it must be."
+
+        93. The propositions presenting what Moore 'knows' are all of such a kind that it is difficult to imagine why anyone should believe the contrary. E.g. the proposition that Moore has spent his whole life in close proximity to the earth. - Once more I can speak of myself here instead of speaking of Moore. What could induce me to believe the opposite? Either a memory, or having been told. - Everything that I have seen or heard gives me the conviction that no man has ever been far from the earth. Nothing in my picture of the world speaks in favour of the opposite.
+
+        94. But I did not get my picture of the world by satisfying myself of its correctness; nor do I have it because I am satisfied of its correctness. No: it is the inherited background against which I distinguish between true and false.
+
+        95. The propositions describing this world-picture might be part of a kind of mythology. And their role is like that of rules of a game; and the game can be learned purely practically, without learning any explicit rules.
+
+        96. It might be imagined that some propositions, of the form of empirical propositions, were hardened and functioned as channels for such empirical propositions as were not hardened but fluid; and that this relation altered with time, in that fluid propositions hardened, and hard ones became fluid.
+
+        97. The mythology may change back into a state of flux, the river-bed of thoughts may shift. But I distinguish between the movement of the waters on the river-bed and the shift of the bed itself; though there is not a sharp division of the one from the other.
+
+        98. But if someone were to say "So logic too is an empirical science" he would be wrong. Yet this is right: the same proposition may get treated at one time as something to test by experience, at another as a rule of testing.
+
+        99. And the bank of that river consists partly of hard rock, subject to no alteration or only to an imperceptible one, partly of sand, which now in one place now in another gets washed away, or deposited.
+
+        100. The truths which Moore says he knows, are such as, roughly speaking, all of us know, if he knows them.
+
+        101. Such a proposition might be e.g. "My body has never disappeared and reappeared again after an interval."
+
+        102. Might I not believe that once, without knowing it, perhaps is a state of unconsciousness, I was taken far away from the earth - that other people even know this, but do not mention it to me? But this would not fit into the rest of my convictions at all. Not that I could describe the system of these convictions. Yet my convictions do form a system, a structure.
+
+        103. And now if I were to say "It is my unshakeable conviction that etc.", this means in the present case too that I have not consciously arrived at the conviction by following a particular line of thought, but that it is anchored in all my questions and answers, so anchored that I cannot touch it.
+
+        104. I am for example also convinced that the sun is not a hole in the vault of heaven.
+
+        105. All testing, all confirmation and disconfirmation of a hypothesis takes place already within a system. And this system is not a more or less arbitrary and doubtful point of departure for all our arguments: no, it belongs to the essence of what we call an argument. The system is not so much the point of departure, as the element in which arguments have their life.
+
+        106. Suppose some adult had told a child that he had been on the moon. The child tells me the story, and I say it was only a joke, the man hadn't been on the moon; no one has ever been on the moon; the moon is a long way off and it is impossible to climb up there or fly there. - If now the child insists, saying perhaps there is a way of getting there which I don't know, etc. what reply could I make to him? What reply could I make to the adults of a tribe who believe that people sometimes go to the moon (perhaps that is how they interpret their dreams), and who indeed grant that there are no ordinary means of climbing up to it or flying there? - But a child will not ordinarily stick to such a belief and will soon be convinced by what we tell him seriously.
+
+        107. Isn't this altogether like the way one can instruct a child to believe in a God, or that none exists, and it will accordingly be able to produce apparently telling grounds for the one or the other?
+
+        108. "But is there then no objective truth? Isn't it true, or false, that someone has been on the moon?" If we are thinking within our system, then it is certain that no one has ever been on the moon. Not merely is nothing of the sort ever seriously reported to us by reasonable people, but our whole system of physics forbids us to believe it. For this demands answers to the questions "How did he overcome the force of gravity?" "How could he live without an atmosphere?" and a thousand others which could not be answered. But suppose that instead of all these answers we met the reply: "We don't know how one gets to the moon, but those who get there know at once that they are there; and even you can't explain everything." We should feel ourselves intellectually very distant from someone who said this.
+
+        109. "An empirical proposition can be tested" (we say). But how? and through what?
+
+        110. What counts as its test? - "But is this an adequate test? And, if so, must it not be recognizable as such in logic?" - As if giving grounds did not come to an end sometime. But the end is not an ungrounded presupposition: it is an ungrounded way of acting.
+
+        111. "I know that I have never been on the moon." That sounds different in the circumstances which actually hold, to the way it would sound if a good many men had been on the moon, and some perhaps without knowing it. In this case one could give grounds for this knowledge. Is there not a relationship here similar to that between the general rule of multiplying and particular multiplications that have been carried out?
+        I want to say: my not having been on the moon is as sure a thing for me as any grounds I could give for it.
+
+        112. And isn't that what Moore wants to say, when he says he knows all these things? - But is his knowing it really what is in question, and not rather that some of these propositions must be solid for us?
+
+        113. When someone is trying to teach us mathematics, he will not begin by assuring us that he knows that a+b=b+a.
+
+        114. If you are not certain of any fact, you cannot be certain of the meaning of your words either.
+
+        115. If you tried to doubt everything you would not get as far as doubting anything. The game of doubting itself presupposes certainty.
+
+        116. Instead of "I know...", couldn't Moore have said: "It stands fast for me that..."? And further: "It stands fast for me and many others..."
+
+        117. Why is it not possible for me to doubt that I have never been on the moon? And how could I try to doubt it?
+        First and foremost, the supposition that perhaps I have been there would strike me as idle. Nothing would follow from it, nothing be explained by it. It would not tie in with anything in my life.
+        When I say "Nothing speaks for, everything against it," this presupposes a principle of speaking for and against. That is, I must be able to say what would speak for it.
+
+        118. Now would it be correct to say: So far no one has opened my skull in order to see whether there is a brain inside; but everything speaks for, and nothing against, its being what they would find there?
+
+        119. But can it also be said: Everything speaks for, and nothing against the table's still being there when no one sees it? For what does speak of it?
+
+        120. But if anyone were to doubt it, how would his doubt come out in practice? And couldn't we peacefully leave him to doubt it, since it makes no difference at all?
+
+        121. Can one say: "Where there is no doubt there is no knowledge either"?
+
+        122. Doesn't one need grounds for doubt?
+
+        123. Wherever I look, I find no ground for doubting that...
+
+        124. I want to say: We use judgments as principles of judgment.
+
+        125. If a blind man were to ask me "Have you got two hands?" I should not make sure by looking. If I were to have any doubt of it, then I don't know why I should trust my eyes. For why shouldn't I test my eyes by looking to find out whether I see my two hands? What is to be tested by what? (Who decides what stands fast?)
+        And what does it mean to say that such and such stands fast?
+
+        126. I am not more certain of the meaning of my words that I am of certain judgments. Can I doubt that this colour is called "blue"?
+        (My) doubts form a system.
+
+        127. For how do I know that someone is in doubt? How do I know that he uses the words "I doubt it" as I do?
+
+        128. From a child up I learnt to judge like this. This is judging.
+
+        129. This is how I learned to judge; this I got to know as judgment.
+
+        130. But isn't it experience that teaches us to judge like this, that is to say, that it is correct to judge like this? But how does experience teach us, then? We may derive it from experience, but experience does not direct us to derive anything from experience. If it is the ground for our judging like this, and not just the cause, still we do not have a ground for seeing this in turn as a ground.
+
+        131. No, experience is not the ground for our game of judging. Nor is its outstanding success.
+
+        132. Men have judged that a king can make rain; we say this contradicts all experience. Today they judge that aeroplanes and the radio etc. are means for the closer contact of peoples and the spread of culture.
+
+        133. Under ordinary circumstances I do not satisfy myself that I have two hands by seeing how it looks. Why not? Has experience shown it to be unnecessary? Or (again): Have we in some way learnt a universal law of induction, and do we trust it here too? - But why should we have learnt one universal law first, and not the special one straight away?
+
+        134. After putting a book in a drawer, I assume it is there, unless... "Experience always proves me right. There is no well attested case of a book's (simply) disappearing." It has often happened that a book has never turned up again, although we thought we knew for certain where it was. - But experience does really teach that a book, say, does not vanish away. (E.g. gradually evaporates.) But is it this experience with books etc. that leads us to assume that such a book has not vanished away? Well, suppose we were to find that under particular novel circumstances books did vanish away. - Shouldn't we alter our assumption? Can one give the lie to the effect of experience on our system of assumption?
+
+        135. But do we not simply follow the principle that what has always happened will happen again (or something like it)? What does it mean to follow this principle? Do we really introduce it into our reasoning? Or is it merely the natural law which our inferring apparently follows? This latter it may be. It is not an item in our considerations.
+
+        136. When Moore says he knows such and such, he is really enumerating a lot of empirical propositions which we affirm without special testing; propositions, that is, which have a peculiar logical role in the system of our empirical propositions.
+
+        137. Even if the most trustworthy of men assures me that he knows things are thus and so, this by itself cannot satisfy me that he does know. Only that he believes he knows. That is why Moore's assurance that he knows... does not interest us. The propositions, however, which Moore retails as examples of such known truths are indeed interesting. Not because anyone knows their truth, or believes he knows them, but because they all have a similar role in the system of our empirical judgments.
+
+        138. We don't, for example, arrive at any of them as a result of investigation.
+        There are e.g. historical investigations and investigations into the shape and also the age of the earth, but not into whether the earth has existed during the last hundred years. Of course many of us have information about this period from our parents and grandparents; but maynt' they be wrong? - "Nonsense!" one will say. "How should all these people be wrong?" - But is that an argument? Is it not simply the rejection of an idea? And perhaps the determination of a concept? For if I speak of a possible mistake here, this changes the role of "mistake" and "truth" in our lives.
+
+        139. Not only rules, but also examples are needed for establishing a practice. Our rules leave loop-holes open, and the practice has to speak for itself.
+
+        140. We do not learn the practice of making empirical judgments by learning rules: we are taught judgments and their connexion with other judgments. A totality of judgments is made plausible to us.
+
+        141. When we first begin to believe anything, what we believe is not a single proposition, it is a whole system of propositions. (Light dawns gradually over the whole.)
+
+        142. It is not single axioms that strike me as obvious, it is a system in which consequences and premises give one another mutual support.
+
+        143. I am told, for example, that someone climbed this mountain many years ago. Do I always enquire into the reliability of the teller of this story, and whether the mountain did exist years ago? A child learns there are reliable and unreliable informants much later than it learns facts which are told it. It doesn't learn at all that that mountain has existed for a long time: that is, the question whether it is so doesn't arise at all. It swallows this consequence down, so to speak, together with what it learns.
+
+        144. The child learns to believe a host of things. I.e. it learns to act according to these beliefs. Bit by bit there forms a system of what is believed, and in that system some things stand unshakeably fast and some are more or less liable to shift. What stands fast does so, not because it is intrinsically obvious or convincing; it is rather held fast by what lies around it.
+
+        145. One wants to say "All my experiences show that it is so". But how do they do that? For that proposition to which they point itself belongs to a particular interpretation of them.
+        "That I regard this proposition as certainly true also characterizes my interpretation of experience."
+
+        146. We form the picture of the earth as a ball floating free in space and not altering essentially in a hundred years. I said "We form the picture etc." and this picture now helps us in the judgment of various situations.
+        I may indeed calculate the dimensions of a bridge, sometimes calculate that here things are more in favour of a bridge than a ferry, etc.etc., - but somewhere I must begin with an assumption or a decision.
+
+        147. The picture of the earth as a ball is a good picture, it proves itself everywhere, it is also a simple picture - in short, we work with it without doubting it.
+
+        148. Why do I not satisfy myself that I have two feet when I want to get up from a chair? There is no why. I simply don't. This is how I act.
+
+        149. My judgments themselves characterize the way I judge, characterize the nature of judgment.
+
+        150. How does someone judge which is his right and which his left hand? How do I know that my judgment will agree with someone else's? How do I know that this colour is blue? If I don't trust myself here, why should I trust anyone else's judgment? Is there a why? Must I not begin to trust somewhere? That is to say: somewhere I must begin with not-doubting; and that is not, so to speak, hasty but excusable: it is part of judging.
+
+        151. I should like to say: Moore does not know what he asserts he knows, but it stands fast for him, as also for me; regarding it as absolutely solid is part of our method of doubt and enquiry.
+
+        152. I do not explicitly learn the propositions that stand fast for me. I can discover them subsequently like the axis around which a body rotates. This axis is not fixed in the sense that anything holds it fast, but the movement around it determines its immobility.
+
+        153. No one ever taught me that my hands don't disappear when I am not paying attention to them. Nor can I be said to presuppose the truth of this proposition in my assertions etc., (as if they rested on it) while it only gets sense from the rest of our procedure of asserting.
+
+        154. There are cases such that, if someone gives signs of doubt where we do not doubt, we cannot confidently understand his signs as signs of doubt.
+        I.e.: if we are to understand his signs of doubt as such, he may give them only in particular cases and may not give them in others.
+
+        155. In certain circumstance a man cannot make a mistake. ("Can" is here used logically, and the proposition does not mean that a man cannot say anything false in those circumstances.) If Moore were to pronounce the opposite of those propositions which he declares certain, we should not just not share his opinion: we should regard him as demented.
+
+        156. In order to make a mistake, a man must already judge in conformity with mankind.
+
+        157. Suppose a man could not remember whether he had always had five fingers or two hands? Should we understand him? Could we be sure of understanding him?
+
+        158. Can I be making a mistake, for example, in thinking that the words of which this sentence is composed are English words whose meaning I know?
+
+        159. As children we learn facts; e.g., that every human being has a brain, and we take them on trust. I believe that there is an island, Australia, of such-and-such a shape, and so on and so on; I believe that I had great-grandparents, that the people who gave themselves out as my parents really were my parents, etc. This belief may never have been expressed; even the thought that it was so, never thought.
+
+        160. The child learns by believing the adult. Doubt comes after belief.
+
+        161. I learned an enormous amount and accepted it on human authority, and then I found some things confirmed or disconfirmed by my own experience.
+
+        162. In general I take as true what is found in text-books, of geography for example. Why? I say: All these facts have been confirmed a hundred times over. But how do I know that? What is my evidence for it? I have a world-picture. Is it true or false? Above all it is the substratum of all my enquiring and asserting. The propositions describing it are not all equally subject to testing.
+
+        163. Does anyone ever test whether this table remains in existence when no one is paying attention to it?
+        We check the story of Napoleon, but not whether all the reports about him are based on sense-deception, forgery and the like. For whenever we test anything, we are already presupposing something that is not tested. Now am I to say that the experiment which perhaps I make in order to test the truth of a proposition presupposes the truth of the proposition that the apparatus I believe I see is really there (and the like)?
+
+        164. Doesn't testing come to an end?
+
+        165. One child might say to another: "I know that the earth is already hundred of years old" and that would mean: I have learnt it.
+
+        166. The difficulty is to realize the groundlessness of our believing.
+
+        167. It is clear that our empirical propositions do not all have the same status, since one can lay down such a proposition and turn it from an empirical proposition into a norm of description.
+        Think of chemical investigations. Lavoisier makes experiments with substances in his laboratory and now he concludes that this and that takes place when there is burning. He does not say that it might happen otherwise another time. He has got hold of a definite world-picture - not of course one that he invented: he learned it as a child. I say world-picture and not hypothesis, because it is the matter-of-course foundation for his research and as such also does unmentioned.
+
+        168. But now, what part is played by the presupposition that a substance A always reacts to a substance B in the same way, given the same circumstances? Or is that part of the definition of a substance?
+
+        169. One might think that there were propositions declaring that chemistry is possible. And these would be propositions of a natural science. For what should they be supported by, if not by experience?
+
+        170. I believe what people transmit to me in a certain manner. In this way I believe geographical, chemical, historical facts etc. That is how I learn the sciences. Of course learning is based on believing.
+        If you have learnt that Mont Blanc is 4000 metres high, if you have looked it up on the map, you say you know it.
+        And can it now be said: we accord credence in this way because it has proved to pay?
+
+        171. A principle ground for Moore to assume that he never was on the moon is that no one ever was on the moon or could come there; and this we believe on grounds of what we learn.
+
+        172. Perhaps someone says "There must be some basic principle on which we accord credence", but what can such a principle accomplish? Is it more than a natural law of 'taking for true'?
+
+        173. Is it maybe in my power what I believe? or what I unshakeably believe?
+        I believe that there is a chair over there. Can't I be wrong? But, can I believe that I am wrong? Or can I so much as bring it under consideration? - And mightn't I also hold fast to my belief whatever I learned later on?! But is my belief then grounded?
+
+        174. I act with complete certainty. But this certainty is my own.
+
+        175. "I know it" I say to someone else; and here there is a justification. But there is none for my belief.
+
+        176. Instead of "I know it" one may say in some cases "That's how it is - rely upon it." In some cases, however "I learned it years and years ago"; and sometimes: "I am sure it is so."
+
+        177. What I know, I believe.
+
+        178. The wrong use made by Moore of the proposition "I know..." lies in his regarding it as an utterance as little subject to doubt as "I am in pain". And since from "I know it is so" there follows "It is so", then the latter can't be doubted either.
+
+        179. It would be correct to say: "I believe..." has subjective truth; but "I know..." not.
+
+        180. Or again "I believe..." is an 'expression', but not "I know...".
+
+        181. Suppose Moore had said "I swear..." instead of "I know...".
+
+        182. The more primitive idea is that the earth never had a beginning. No child has reason to ask himself how long the earth has existed, because all change takes place on it. If what is called the earth really came into existence at some time - which is hard enough to picture - then one naturally assumes the beginning as having been an inconceivably long time ago.
+
+        183. "It is certain that after the battle of Austerlitz Napoleon... Well, in that case it's surely also certain that the earth existed then."
+
+        184. "It is certain that we didn't arrive on this planet from another one a hundred years ago." Well, it's as certain as such things are.
+
+        185. It would strike me as ridiculous to want to doubt the existence of Napoleon; but if someone doubted the existence of the earth 150 years ago, perhaps I should be more willing to listen, for now he is doubting our whole system of evidence. It does not strike me as if this system were more certain than a certainty within it.
+
+        186. "I might suppose that Napoleon never existed and is a fable, but not that the earth did not exist 150 years ago."
+
+        187. "Do you know that the earth existed then?" - "Of course I know that. I have it from someone who certainly knows all about it."
+
+        188. It strikes me as if someone who doubts the existence of the earth at that time is impugning the nature of all historical evidence. And I cannot say of this latter that it is definitely correct.
+
+        189. At some point one has to pass from explanation to mere description.
+
+        190. What we call historical evidence points to the existence of the earth a long time before my birth; - the opposite hypothesis has nothing on its side.
+
+        191. Well, if everything speaks for an hypothesis and nothing against it - is it then certainly true? One may designate it as such. - But does it certainly agree with reality, with the facts? - With this question you are already going round in a circle.
+
+        192. To be sure there is justification; but justification comes to an end.
+        _____________________
+
+        193. What does this mean: the truth of a proposition is a certain?
+
+        194. With the word "certain" we express complete conviction, the total absence of doubt, and thereby we seek to convince other people. That is subjective certainty.
+        But when is something objectively certain? When a mistake is not possible. But what kind of possibility is that? Mustn't mistake be logically excluded?
+
+        195. If I believe that I am sitting in my room when I am not, then I shall not be said to have made a mistake. But what is the essential difference between this case and a mistake?
+
+        196. Sure evidence is what we accept as sure, it is evidence that we go by in acting surely, acting without any doubt.
+        What we call "a mistake" plays a quite special part in our language games, and so too does what we regard as certain evidence.
+
+        197. It would be nonsense to say that we regard something as sure evidence because it is certainly true.
+
+        198. Rather, we must first determine the role of deciding for or against a proposition.
+
+        199. The reason why the use of the expression "true or false" has something misleading about it is that it is like saying "it tallies with the facts or it doesn't", and the very thing that is in question is what "tallying" is here.
+         <h3>EXIT FIRST</h3>
+        </div>
+
+        <div class="two_hundreds">
+        200. Really "The proposition is either true or false" only means that it must be possible to decide for or against it. But this does not say what the ground for such a decision is like.
+
+        201. Suppose someone were to ask: "Is it really right for us to rely on the evidence of our memory (or our senses) as we do?"
+
+        202. Moore's certain propositions almost declare that we have a right to rely upon this evidence.
+
+        203. [Everything that we regard as evidence indicates that the earth already existed long before my birth. The contrary hypothesis has nothing to confirm it at all.
+        If everything speaks for an hypothesis and nothing against it, is it objectively certain? One can call it that. But does it necessarily agree with the world of facts? At the very best it shows us what "agreement" means. We find it difficult to imagine it to be false, but also difficult to make use of.]{crossed-out in MS}
+        What does this agreement consist in, if not in the fact that what is evidence in these language games speaks for our proposition? (Tractatus Logico-Philosophicus)
+
+        204. Giving grounds, however, justifying the evidence, comes to an end; - but the end is not certain propositions' striking us immediately as true, i.e. it is not a kind of seeing on our part; it is our acting, which lies at the bottom of the language-game.
+
+        205. If the true is what is grounded, then the ground is not true, not yet false.
+
+        206. If someone asked us "but is that true?" we might say "yes" to him; and if he demanded grounds we might say "I can't give you any grounds, but if you learn more you too will think the same."
+        If this didn't come about, that would mean that he couldn't for example learn history.
+
+        207. "Strange coincidence, that every man whose skull has been opened had a brain!"
+
+        208. I have a telephone conversation with New York. My friend tells me that his young trees have buds of such and such a kind. I am now convinced that his tree is... Am I also convinced that the earth exists?
+
+        209. The existence of the earth is rather part of the whole picture which forms the starting-point of belief for me.
+
+        210. Does my telephone call to New York strengthen my conviction that the earth exists?
+        Much seems to be fixed, and it is removed from the traffic. It is also so to speak shunted onto an unused siding.
+
+        211. Now it gives our way of looking at things, and our researches, their form. Perhaps it was once disputed. But perhaps, for unthinkable ages, it has belonged to the scaffolding of our thoughts. (Every human being has parents.)
+
+        212. In certain circumstances, for example, we regard a calculation as sufficiently checked. What gives us a right to do so? Experience? May that not have deceived us? Somewhere we must be finished with justification, and then there remains the proposition that this is how we calculate.
+
+        213. Our 'empirical propositions' do not form a homogeneous mass.
+
+        214. What prevents me from supposing that this table either vanishes or alters its shape and colour when on one is observing it, and then when someone looks at it again changes back to its old condition? - "But who is going to suppose such a thing?" - one would feel like saying.
+
+        215. Here we see that the idea of 'agreement with reality' does not have any clear application.
+
+        216. The proposition "It is written".
+
+        217. If someone supposed that all our calculations were uncertain and that we could rely on none of them (justifying himself by saying that mistakes are always possible) perhaps we would say he was crazy. But can we say he is in error? Does he not just react differently? We rely on calculations, he doesn't; we are sure, he isn't.
+
+        218. Can I believe for one moment that I have ever been in the stratosphere? No. So do I know the contrary, like Moore?
+
+        219. There cannot be any doubt about it for me as a reasonable person. - That's it. -
+
+        220. The reasonable man does not have certain doubts.
+
+        221. Can I be in doubt at will?
+
+        222. I cannot possibly doubt that I was never in the stratosphere. Does that make me know it? Does it make it true?
+
+        223. For mightn't I be crazy and not doubting what I absolutely ought to doubt?
+
+        224. "I know that it never happened, for if it had happened I could not possibly have forgotten it."
+        But, supposing it did happen, then it just would have been the case that you had forgotten it. And how do you know that you could not possibly have forgotten it? Isn't that just from earlier experience?
+
+        225. What I hold fast to is not one proposition but a nest of propositions.
+
+        226. Can I give the supposition that I have ever been on the moon any serious consideration at all?
+
+        227. "Is that something that one can forget?!"
+
+        228. "In such circumstances, people do not say 'Perhaps we've all forgotten', and the like, but rather they assume that..."
+
+        229. Our talk gets its meaning from the rest of our proceedings.
+
+        230. We are asking ourselves: what do we do with a statement "I know..."? For it is not a question of mental processes or mental states.
+        And that is how one must decide whether something is knowledge or not.
+
+        231. If someone doubted whether the earth had existed a hundred years ago, I should not understand, for this reason: I would not know what such a person would still allow to be counted as evidence and what not.
+
+        232. "We could doubt every single one of these facts, but we could not doubt them all."
+        Wouldn't it be more correct to say: "we do not doubt them all". 
+        Our not doubting them all is simply our manner of judging, and therefore of acting.
+
+        233. If a child asked me whether the earth was already there before my birth, I should answer him that the earth did not begin only with my birth, but that it existed long, long before. And I should have the feeling of saying something funny. Rather as if a child had asked if such and such a mountain were higher than a tall house that it had seen. In answering the question I should have to be imparting a picture of the world to the person who asked it.
+        If I do answer the question with certainty, what gives me this certainty?
+
+        234. I believe that I have forebears, and that every human being has them. I believe that there are various cities, and, quite generally, in the main facts of geography and history. I believe that the earth is a body on whose surface we move and that it no more suddenly disappears or the like than any other solid body: this table, this house, this tree, etc. If I wanted to doubt the existence of the earth long before my birth, I should have to doubt all sorts of things that stand fast for me.
+
+        235. And that something stands fast for me is not grounded in my stupidity or credulity.
+
+        236. If someone said "The earth has not long been..." what would he be impugning? Do I know?
+        Would it not have to be what is called a scientific belief? Might it not be a mystical one? Is there any absolute necessity for him to be contradicting historical facts? or even geographical ones?
+
+        237. If I say "an hour ago this table didn't exist", I probably mean that it was only made later on.
+        If I say "this mountain didn't exist then", I presumably mean that it was only formed later on - perhaps by a volcano.
+        If I say "this mountain didn't exist an hour ago", that is such a strange statement that it is not clear what I mean. Whether for example I mean something untrue but scientific. Perhaps you think that the statement that the mountain didn't exist then is quite clear, however one conceives the context. But suppose someone said "This mountain didn't exist a minute ago, but an exactly similar one did instead." Only the accustomed context allows what is meant to come through clearly.
+
+        238. I might therefore interrogate someone who said that the earth did not exist before his birth, in order to find out which of my convictions he was at odds with. And then it might be that he was contradicting my fundamental attitudes, and if that were how it was, I should have to put up with it. 
+        Similarly if he said he had at some time been on the moon.
+
+        239. I believe that every human being has two human parents; but Catholics believe that Jesus only had a human mother. And other people might believe that there are human beings with no parents, and give no credence to all the contrary evidence. Catholics believe as well that in certain circumstances a wafer completely changes its nature, and at the same time that all evidence proves the contrary. And so if Moore said "I know that this is wine and not blood", Catholics would contradict him.
+
+        240. What is the belief that all human beings have parents based on? On experience. And how can I base this sure belief on my experience? Well, I base it not only on the fact that I have known the parents of certain people but on everything that I have learnt about the sexual life of human beings and their anatomy and physiology: also on what I have heard and seen of animals. But then is that really a proof?
+
+        241. Isn't this an hypothesis, which, as I believe, is again and again completely confirmed?
+
+        242. Mustn't we say at every turn: "I believe this with certainty"?
+
+        243. One says "I know" when one is ready to give compelling grounds. "I know" relates to a possibility of demonstrating the truth. Whether someone knows something can come to light, assuming that he is convinced of it.
+        But if what he believes is of such a kind that the grounds that he can give are no surer than his assertion, then he cannot say that he knows what he believes.
+
+        244. If someone says "I have a body", he can be asked "Who is speaking here with this mouth?"
+
+        245. To whom does anyone say that he knows something? To himself, or to someone else. If he says it to himself, how is it distinguished from the assertion that he is sure that things are like that? There is no subjective sureness that I know something. The certainty is subjective, but not the knowledge. So if I say "I know that I have two hands", and that is not supposed to express just my subjective certainty, I must be able to satisfy myself that I am right. But I can't do that, for my having two hands is not less certain before I have looked at them than afterwards. But I could say: "That I have two hands is an irreversible belief." That would express the fact that I am not ready to let anything count as a disproof of this proposition.
+
+        246. "Here I have arrived at a foundation of all my beliefs." "This position I will hold!" But isn't that, precisely, only because I am completely convinced of it? - What is 'being completely convinced' like?
+
+        247. What would it be like to doubt now whether I have two hands? Why can't I imagine it at all? What would I believe if I didn't believe that? So far I have no system at all within which this doubt might exist.
+
+        248. I have arrived at the rock bottom of my convictions. 
+        And one might almost say that these foundation-walls are carried by the whole house.
+
+        249. One gives oneself a false picture of doubt.
+
+        250. My having two hands is, in normal circumstances, as certain as anything that I could produce in evidence for it.
+        That is why I am not in a position to take the sight of my hand as evidence for it.
+
+        251. Doesn't this mean: I shall proceed according to this belief unconditionally, and not let anything confuse me?
+
+        252. But it isn't just that I believe in this way that I have two hands, but that every reasonable person does.
+
+        253. At the foundation of well-founded belief lies belief that is not founded.
+
+        254. Any 'reasonable' person behaves like this.
+
+        255. Doubting has certain characteristic manifestations, but they are only characteristic of it in particular circumstances. If someone said that he doubted the existence of his hands, kept looking at them from all sides, tried to make sure it wasn't 'all done by mirrors', etc., we should not be sure whether we ought to call this doubting. We might describe his way of behaving as like the behaviour of doubt, but this game would be not be ours.
+
+        256. On the other hand a language-game does change with time.
+
+        257. If someone said to me that he doubted whether he had a body I should take him to be a half-wit. But I shouldn't know what it would mean to try to convince him that he had one. And if I had said something, and that had removed his doubt, I should not know how or why.
+
+        258. I do not know how the sentence "I have a body" is to be used.
+        That doesn't unconditionally apply to the proposition that I have always been on or near the surface of the earth.
+
+        259. Someone who doubted whether the earth had existed for 100 years might have a scientific, or on the other hand philosophical, doubt.
+
+        260. I would like to reserve the expression "I know" for the cases in which it is used in normal linguistic exchange.
+
+        261. I cannot at present imagine a reasonable doubt as to the existence of the earth during the last 100 years.
+
+        262. I can imagine a man who had grown up in quite special circumstances and been taught that the earth came into being 50 years ago, and therefore believed this. We might instruct him: the earth has long... etc. - We should be trying to give him our picture of the world.
+        This would happen through a kind of persuasion.
+
+        263. The schoolboy believes his teachers and his schoolbooks.
+
+        264. I could imagine Moore being captured by a wild tribe, and their expressing the suspicion that he has come from somewhere between the earth and the moon. Moore tells them that he knows etc. but he can't give them the grounds for his certainty, because they have fantastic ideas of human ability to fly and know nothing about physics. This would be an occasion for making that statement.
+
+        265. But what does it say, beyond "I have never been to such and such a place, and have compelling grounds to believe that"?
+
+        266. And here one would still have to say what are compelling grounds.
+
+        267. "I don't merely have the visual impression of a tree: I know that it is a tree".
+
+        268. "I know that this is a hand." - And what is a hand? - "Well, this, for example".
+
+        269. Am I more certain that I have never been on the moon than that I have never been in Bulgaria? Why am I so sure? Well, I know that I have never been anywhere in the neighbourhood - for example I have never been in the Balkans.
+
+        270. "I have compelling grounds for my certitude." These grounds make the certitude objective.
+
+        271. What is a telling ground for something is not anything I decide.
+
+        272. I know = I am familiar with it as a certainty.
+
+        273. But when does one say of something that it is certain?
+        For there can be dispute whether something is certain; I mean, when something is objectively certain.
+        There are countless general empirical propositions that count as certain for us.
+
+        274. One such is that if someone's arm is cut off it will not grow again. Another, if someone's head is cut off he is dead and will never live again.
+        Experience can be said to teach us these propositions. However, it does not teach us them in isolation: rather, it teaches us a host of interdependent propositions. If they were isolated I might perhaps doubt them, for I have no experience relating to them.
+
+        275. If experience is the ground of our certainty, then naturally it is past experience.
+        And it isn't for example just my experience, but other's people's, that I get knowledge from.
+        Now one might say that it is experience again that leads us to give credence to others. But what experience makes me believe that the anatomy and physiology books don't contain what is false? Though it is true that this trust is backed up by my own experience.
+
+        276. We believe, so to speak, that this great building exists, and then we see, now here, now there, one or another small corner of it.
+
+        277. "I can't help believing..."
+
+        278. "I am comfortable that that is how things are."
+
+        279. It is quite sure that motor cars don't grow out of the earth. We feel that if someone could believe the contrary he could believe everything that we say is untrue, and could question everything that we hold to be sure.
+        But how does this one belief hang together with all the rest? We should like to say that someone who could believe that does not accept our whole system of verification.
+        This system is something that a human being acquires by means of observation and instruction. I intentionally do not say "learns".
+
+        280. After he has seen this and this and heard that and that, he is not in a position to doubt whether...
+
+        281. I, L.W., believe, am sure, that my friend hasn't sawdust in his body or in his head, even though I have no direct evidence of my senses to the contrary. I am sure, by reason of what has been said to me, of what I have read, and of my experience. To have doubts about it would seem to me madness - of course, this is also in agreement with other people; but I agree with them.
+
+        282. I cannot say that I have good grounds for the opinion that cats do not grow on trees or that I had a father and a mother.
+        If someone has doubts about it - how is that supposed to have come about? By his never, from the beginning, having believed that he had parents? But then, is that conceivable, unless he has been taught it?
+
+        283. For how can a child immediately doubt what it is taught? That could mean only that he was incapable of learning certain language games.
+
+        284. People have killed animals since the earliest times, used the fur, bones etc.etc. for various purposes; they have counted definitely on finding similar parts in any similar beast.
+        They have always learnt from experience; and we can see from their actions that they believe certain things definitely, whether they express this belief or not. By this I naturally do not want to say that men should behave like this, but only that they do behave like this.
+
+        285. If someone is looking for something and perhaps roots around in a certain place, he shows that he believes that what he is looking for is there.
+
+        286. What we believe depends on what we learn. We all believe that it isn't possible to get to the moon; but there might be people who believe that that is possible and that it sometimes happens. We say: these people do not know a lot that we know. And, let them be never so sure of their belief - they are wrong and we know it.
+        If we compare our system of knowledge with theirs then theirs is evidently the poorer one by far.
+
+        23.9.50
+
+        287. The squirrel does not infer by induction that it is going to need stores next winter as well. And no more do we need a law of induction to justify our actions or our predictions.
+        288. I know, not just that the earth existed long before my birth, but also that it is a large body, that this has been established, that I and the rest of mankind have forebears, that there are books about all this, that such books don't lie, etc. etc. etc. And I know all this? I believe it. This body of knowledge has been handed on to me and I have no grounds for doubting it, but, on the contrary, all sorts of confirmation.
+        And why shouldn't I say that I know all this? Isn't that what one does say?
+        But not only I know, or believe, all that, but the others do too. Or rather, I believe that they believe it.
+
+        289. I am firmly convinced that others believe, believe they know, that all that is in fact so.
+
+        290. I myself wrote in my book that children learn to understand a word in such and such a way. Do I know that, or do I believe it? Why in such a case do I write not "I believe etc." but simply the indicative sentence?
+
+        291. We know that the earth is round. We have definitively ascertained that it is round.
+        We shall stick to this opinion, unless our whole way of seeing nature changes. "How do you know that?" - I believe it.
+
+        292. Further experiments cannot give the lie to our earlier ones, at most they may change our whole way of looking at things.
+
+        293. Similarly with the sentence "water boils at 100 C".
+
+        294. This is how we acquire conviction, this is called "being rightly convinced".
+
+        295. So hasn't one, in this sense, a proof of the proposition? But that the same thing has happened again is not a proof of it; though we do say that it gives us a right to assume it.
+
+        296. This is what we call an "empirical foundation" for our assumptions.
+
+        297. For we learn, not just that such and such experiments had those and those results, but also the conclusion which is drawn. And of course there is nothing wrong in our doing so. For this inferred proposition is an instrument for a definitive use.
+
+        298. 'We are quite sure of it' does not mean just that every single person is certain of it, but that we belong to a community which is bound together by science and education.
+
+        299. We are satisfied that the earth is round. [In English]
+        ______________________
+        </div>
+        10.3.51
+        <div class="three_hundreds">
+        300. Not all corrections of our views are on the same level.
+        301. Supposing it wasn't true that the earth had already existed long before I was born - how should we imagine the mistake being discovered?
+
+        302. It's no good saying "Perhaps we are wrong" when, if no evidence is trustworthy, trust is excluded in the case of the present evidence.
+
+        303. If, for example, we have always been miscalculating, and twelve times twelve isn't a hundred and forty-four, why should we trust any other calculation? And of course that is wrongly put.
+
+        304. But nor am I making a mistake about twelve times twelve being a hundred and forty-four. I may say later that I was confused just now, but not that I was making a mistake.
+
+        305. Here once more there is needed a step like the one taken in relativity theory.
+
+        306. "I don't know if this is a hand." But do you know what the word "hand" means? And don't say "I know that it means now for me". And isn't it an empirical fact - that this word is used like this?
+
+        307. And here the strange thing is that when I am quite certain of how the words are used, have no doubt about it, I can still give no grounds for my way of going on. If I tried I could give a thousand, but none as certain as the very thing they were supposed to be grounds for.
+
+        308. 'Knowledge' and 'certainty' belong to different categories. They are not two 'mental states' like, say 'surmising' and 'being sure'. (Here I assume that it is meaningful for me to say "I know what (e.g.) the word 'doubt' means" and that this sentence indicates that the word "doubt" has a logical role.) What interests us now is not being sure but knowledge. That is, we are interested in the fact that about certain empirical propositions no doubt can exist if making judgments is to be possible at all. Or again: I am inclined to believe that not everything that has the form of an empirical proposition is one.
+
+        309. Is it that rule and empirical proposition merge into one another?
+
+        310. A pupil and a teacher. The pupil will not let anything be explained to him, for he continually interrupts with doubts, for instance as to the existence of things, the meaning of words, etc. The teacher says "Stop interrupting me and do as I tell you. So far your doubts don't make sense at all."
+
+        311. Or imagine that the boy questioned the truth of history (and everything that connects up with it) - and even whether the earth existed at all a hundred years before.
+
+        312. Here it strikes me as if this doubt were hollow. But in that case - isn't belief in history hollow too? No: there is so much that this connects up with.
+
+        313. So is that what makes us believe a proposition? Well - the grammar of "believe" just does hang together with the grammar of the proposition believed.
+
+        314. Imagine that the schoolboy really did ask "and is there a table there even when I turn around, and even when no one is there to see it?" Is the teacher to reassure him - and say "of course there is!"?
+        Perhaps the teacher will get a bit impatient, but think that the boy will grow out of asking such questions.
+
+        315. That is to say, the teacher will feel that this is not really a legitimate question at all.
+        And it would be just the same if the pupil cast doubt on the uniformity of nature, that is to say on the justification of inductive arguments. - The teacher would feel that this was only holding them up, that this way the pupil would only get stuck and make no progress. - And he would be right. It would be as if someone were looking for some object in a room; he opens a drawer and doesn't see it there; then he closes it again, waits, and opens it once more to see if perhaps it isn't there now, and keeps on like that. He has not learned to look for things. And in the same way this pupil has not learned how to ask questions. He has not learned the game that we are trying to teach him.
+
+        316. And isn't it the same as if the pupil were to hold up his history lesson with doubts as to whether the earth really...?
+
+        317. This doubt isn't one of the doubts in our game. (But not as if we chose this game!)
+
+        12.3.51
+
+        318. 'The question doesn't arise at all.' Its answer would characterize a method. But there is no sharp boundary between methodological propositions and propositions within a method.
+        319. But wouldn't one have to say then, that there is no sharp boundary between propositions of logic and empirical propositions? The lack of sharpness is that of the boundary between rule and empirical proposition.
+
+        320. Here one must, I believe, remember that the concept 'proposition' itself is not a sharp one.
+
+        321. Isn't what I am saying: any empirical proposition can be transformed into a postulate - and then becomes a norm of description. But I am suspicious even of this. The sentence is too general. One almost wants to say "any empirical proposition can, theoretically, be transformed...", but what does "theoretically" mean here? It sounds all to reminiscent of the Tractatus.
+
+        322. What if the pupil refused to believe that this mountain had been there beyond human memory?
+        We should say that he had no grounds for this suspicion.
+
+        323. So rational suspicion must have grounds?
+        We might also say: "the reasonable man believes this".
+
+        324. Thus we should not call anybody reasonable who believed something in despite of scientific evidence.
+
+        325. When we say that we know that such and such..., we mean that any reasonable person in our position would also know it, that it would be a piece of unreason to doubt it. Thus Moore wants to say not merely that he knows that he etc. etc., but also that anyone endowed with reason in his position would know it just the same.
+
+        326. But who says what it is reasonable to believe in this situation?
+
+        327. So it might be said: "The reasonable man believes: that the earth has been there since long before his birth, that his life has been spent on the surface of the earth, or near it, that he has never, for example, been on the moon, that he has a nervous system and various innards like all other people, etc., etc."
+
+        328. "I know it as I know that my name is L.W."
+
+        329. 'If he calls that in doubt - whatever "doubt" means here - he will never learn this game'.
+
+        330. So here the sentence "I know..." expresses the readiness to believe certain things.
+
+        13.3.
+
+        331. If we ever do act with certainty on the strength of belief, should we wonder that there is much we cannot doubt?
+        332. Imagine that someone were to say, without wanting to philosophize, "I don't know if I have ever been on the moon; I don't remember ever having been there". (Why would this person be so radically different from us?)
+        In the first place - how would he know that he was on the moon? How does he imagine it? Compare: "I do not know if I was ever in the village of X." But neither could I say that if X were in Turkey, for I know that I was never in Turkey.
+
+        333. I ask someone "Have you ever been in China?" He replies "I don't know". Here one would surely say "You don't know? Have you any reason to believe you might have been there at some time? Were you for example ever near the Chinese border? Or were your parents there at the time when you were going to be born?" - Normally Europeans do know whether they have been in China or not.
+
+        334. That is to say: only in such-and-such circumstances does a reasonable person doubt that.
+
+        335. The procedure in a court of law rests on the fact that circumstances give statements a certain probability. The statement that, for example, someone came into the world without parents wouldn't ever be taken into consideration there.
+
+        336. But what men consider reasonable or unreasonable alters. At certain periods men find reasonable what at other periods they found unreasonable. And vice-versa.
+        But is there no objective character here?
+        Very intelligent and well-educated people believe in the story of creation in the Bible, while others hold it as proven false, and the grounds of the latter are well known to the former.
+
+        337. One cannot make experiments if there are not some things that one does not doubt. But that does not mean that one takes certain presuppositions on trust. When I write a letter and post it, I take it for granted that it will arrive - I expect this. 
+        If I make an experiment I do not doubt the existence of the apparatus before my eyes. I have plenty of doubts, but not that. If I do a calculation I believe, without any doubts, that the figures on the paper aren't switching of their own accord, and I also trust my memory the whole time, and trust it without any reservation. The certainty here is the same as that of my never having been on the moon.
+
+        338. But imagine people who were never quite certain of these things, but said that they were very probably so, and that it did not pay to doubt them. Such a person, then, would say in my situation: "It is extremely unlikely that I have ever been on the moon", etc., etc. How would the life of these people differ from ours? For there are people who say that it is merely extremely probable that water over a fire will boil and not freeze, and that therefore strictly speaking what we consider impossible is only improbable. What difference does this make in their lives? Isn't it just that they talk rather more about certain things that the rest of us?
+
+        339. Imagine someone who is supposed to fetch a friend from the railway station and doesn't simply look the train up in the time-table and go to the station at the right time, but says:"I have no belief that the train will really arrive, but I will go to the station all the same." He does everything that the normal person does, but accompanies it with doubts or with self-annoyance, etc.
+
+        340. We know, with the same certainty with which we believe any mathematical proposition, how the letters A and B are pronounced, what the colour of human blood is called, that other human beings have blood and call it "blood".
+
+        341. That is to say, the questions that we raise and our doubts depend on the fact that some propositions are exempt from doubt, are as it were like hinges on which those turn.
+
+        342. That is to say, it belongs to the logic of our scientific investigations that certain things are in deed not doubted.
+
+        343. But it isn't that the situation is like this: We just can't investigate everything, and for that reason we are forced to rest content with assumption. If I want the door to turn, the hinges must stay put.
+
+        344. My life consists in my being content to accept many things.
+
+        345. If I ask someone "what colour do you see at the moment?", in order, that is, to learn what colour is there at the moment, I cannot at the same time question whether the person I ask understands English, whether he wants to take me in, whether my own memory is not leaving me in the lurch as to the names of colours, and so on.
+
+        346. When I am trying to mate someone in chess, I cannot have doubts about the pieces perhaps changing places of themselves and my memory simultaneously playing tricks on me so that I don't notice.
+
+        15.3.51
+
+        347. "I know that that's a tree." Why does it strike me as if I did not understand the sentence? though it is after all an extremely simple sentence of the most ordinary kind? It is as if I could not focus my mind on any meaning. Simply because I don't look for the focus where the meaning is. As soon as I think of an everyday use of the sentence instead of a philosophical one, its meaning becomes clear and ordinary.
+        348. Just as the words "I am here" have a meaning only in certain contexts, and not when I say them to someone who is sitting in front of me and sees me clearly, - and not because they are superfluous, but because their meaning is not determined by the situation, yet stands in need of such determination.
+
+        349. "I know that that's a tree" - this may mean all sorts of things: I look at a plant that I take for a young beech and that someone else thinks is a black-currant. He says "that's a shrub"; I say it is a tree. - We see something in the mist which one of us takes for a man, and the other says "I know that that's a tree". Someone wants to test my eyes etc.etc. - etc.etc. Each time the 'that' which I declare to be a tree is of a different kind.
+        But what when we express ourselves more precisely? For example: "I know that that thing there is a tree, I can see it quite clearly." - Let us even suppose I had made this remark in the context of a conversation (so that it was relevant when I made it); and now, out of all context, I repeat it while looking at the tree, and I add "I mean these words as I did five minutes ago". If I added, for example, that I had been thinking of my bad eyes again and it was a kind of sigh, then there would be nothing puzzling about the remark.
+        For how a sentence is meant can be expressed by an expansion of it and may therefore be made part of it.
+
+        350. "I know that that's a tree" is something a philosopher might say to demonstrate to himself or to someone else that he knows something that is not a mathematical or logical truth. Similarly, someone who was entertaining the idea that he was no use any more might keep repeating to himself "I can still do this and this and this." If such thoughts often possessed him one would not be surprised if he, apparently out of all context, spoke such a sentence out loud. (But here I have already sketched a background, a surrounding, for this remark, that is to say given it a context.) But if someone, in quite heterogeneous circumstances, called out with the most convincing mimicry: "Down with him!", one might say of these words (and their tone) that they were a pattern that does indeed have familiar applications, but that in this case it was not even clear what language the man in question was speaking. I might make with my hand the movement I should make if I were holding a hand-saw and sawing through a plank; but would one have any right to call this movement sawing, out of all context? - (It might be something quite different!)
+
+        351. Isn't the question "have these words a meaning?" similar to "Is that a tool?" asked as one produces, say, a hammer? I say "Yes, it's a hammer." But what if the thing that any of us would take for a hammer were somewhere else a missile, for example, or a conductor's baton? Now make the application yourself.
+
+        352. If someone says, "I know that that's a tree" I may answer: "Yes, that is a sentence. An English sentence. And what is it supposed to be doing?" Suppose he replies: "I just wanted to remind myself that I know thing like that"? -
+
+        353. But suppose he said "I want to make a logical observation"? - If a forester goes into a wood with his men and says "This tree has got to be cut down, and this one and this one" -- what if he then observes "I know that that's a tree"? - But might not I say of the forester "He knows that that's a tree - he doesn't examine it, or order his men to examine it"?
+
+        354. Doubting and non-doubting behavior. There is the first only if there is the second.
+
+        355. A mad-doctor (perhaps) might ask me "Do you know what that is?" and I might reply "I know that it's a chair; I recognize it, it's always been in my room". He says this, possibly, to test not my eyes but my ability to recognize things, to know their names and their functions. What is in question here is a kind of knowing one's way about. Now it would be wrong for me to say "I believe that it's a chair" because that would express my readiness for my statement to be tested. While "I know that it..." implies bewilderment if what I said was not confirmed.
+
+        356. My "mental state", the "knowing", gives me no guarantee of what will happen. But it consists in this, that I should not understand where a doubt could get a foothold nor where a further test was possible.
+
+        357. One might say: " 'I know' expresses comfortable certainty, not the certainty that is still struggling."
+
+        358. Now I would like to regard this certainty, not as something akin to hastiness or superficiality, but as a form of life. (That is very badly expressed and probably badly thought as well.)
+
+        359. But that means I want to conceive it as something that lies beyond being justified or unjustified; as it were, as something animal.
+
+        360. I know that this is my foot. I could not accept any experience as proof to the contrary. - That may be an exclamation; but what follows from it? At least that I shall act with a certainty that knows no doubt, in accordance with my belief.
+
+        361. But I might also say: It has been revealed to me by God that it is so. God has taught me that this is my foot. And therefore if anything happened that seemed to conflict with this knowledge I should have to regard that as deception.
+
+        362. But doesn't it come out here that knowledge is related to a a decision?
+
+        363. And here it is difficult to find the transition from the exclamation one would like to make, to its consequences in what one does.
+
+        364. One might also put this question: "If you know that that is your foot, - do you also know, or do you only believe, that no future experience will seem to contradict your knowledge?" (That is, that nothing will seem to you yourself to do so.)
+
+        365. If someone replied: "I also know that it will never seem to me as if anything contradicted that knowledge", - what could we gather from that, except that he himself had no doubt that it would never happen? -
+
+        366. Suppose it were forbidden to say "I know" and only allowed to say "I believe I know"?
+
+        367. Isn't it the purpose of construing a word like "know" analogously to "believe" that then opprobrium attaches to the statement "I know" if the person who makes it is wrong?
+        As a result a mistake becomes something forbidden.
+
+        368. If someone says that he will recognize no experience as proof of the opposite, that is after all a decision. It is possible that he will act against it.
+
+        16.3.51
+
+        369. If I wanted to doubt whether this was my hand, how could I avoid doubting whether the word "hand" has any meaning? So that is something I seem to know after all.
+        370. But more correctly: The fact that I use the word "hand" and all the other words in my sentence without a second thought, indeed that I should stand before the abyss if I wanted so much as to try doubting their meanings - shows that absence of doubt belongs to the essence of the language-game, that the question "How do I know..." drags out the language-game, or else does away with it.
+
+        371. Doesn't "I know that that's a hand", in Moore's sense, mean the same, or more or less the same, as: I can make statements like "I have a pain in this hand" or 'this hand is weaker than the other" or "I once broke this hand", and countless others, in language-games where a doubt as to the existence of this hand does not come in?
+
+        372. Only in certain cases is it possible to make an investigation "is that really a hand?" (or "my hand"). For "I doubt whether that is really my (or a) hand" makes no sense without some more precise determination. One cannot tell from these words alone whether any doubt at all is meant - nor what kind of doubt.
+
+        373. Why is it supposed to be possible to have grounds for believing something if it isn't possible to be certain?
+
+        374. We teach a child "that is your hand", not "that is perhaps (or "probably") your hand". That is how a child learns the innumerable language-games that are concerned with his hand. An investigation or question, 'whether this is really a hand' never occurs to him. Nor, on the other hand, does he learn that he knows that this is a hand.
+
+        375. Here one must realize that complete absence of doubt at some point, even where we would say that 'legitimate' doubt can exist, need not falsify a language-game. For there is also something like another arithmetic.
+        I believe that this admission must underlie any understanding of logic.
+        </div>
+        </p>
+
+
+
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Make sure to add jQuery - download the most recent version at http://jquery.com/ -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
