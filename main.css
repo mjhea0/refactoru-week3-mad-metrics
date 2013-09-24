@@ -1,3 +1,4 @@
+/** lightbox */
 .black_overlay{
     display: none;
     position: fixed;
@@ -24,3 +25,34 @@
     z-index:1002;
     overflow: auto;
  }
+
+/** chart */
+#vertgraph {                    
+width: 378px; 
+height: 207px; 
+position: relative; 
+
+}
+#vertgraph ul { 
+    width: 378px; 
+    height: 207px; 
+    margin: 0; 
+    padding: 0; 
+}
+#vertgraph ul li {  
+    position: absolute; 
+    width: 50px; 
+    height: 160px; 
+    bottom: 34px; 
+    padding: 0 !important; 
+    margin: 0 !important; 
+    background-color:red;
+    text-align: center; 
+    font-weight: bold; 
+    color: white; 
+    line-height: 2.5em;
+}
+
+#vertgraph li.one { left: 24px; background-position: 0px bottom !important; }
+#vertgraph li.two { left: 101px; background-position: -28px bottom !important; }
+#vertgraph li.three { left: 176px; background-position: -56px bottom !important; }

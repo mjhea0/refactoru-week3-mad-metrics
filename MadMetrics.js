@@ -6,9 +6,9 @@ $(document).ready(function() {
     visit_time = null;
     first_section_time = null; 
     second_section_time = null;
-    third_section_time = null
-    scrollPercent = null
-    scrollAmount = null
+    third_section_time = null;
+    scrollPercent = null;
+    scrollAmount = null;
     lastFixPos = 0;
 	  threshold = 200;
 	  counter = 0;
@@ -53,7 +53,6 @@ $(document).ready(function() {
     });
    $(".hundreds").mouseleave(function(e) {
         first_section_time += (e.timeStamp - start_hundreds) / 1000;
- 
         console.log("Time spent in 1st section: " , first_section_time)
     })
 
@@ -64,7 +63,6 @@ $(document).ready(function() {
     });
    $(".two_hundreds").mouseleave(function(e) {
         second_section_time += (e.timeStamp - start_two_hundreds) / 1000;
- 
         console.log("Time spent in 2nd section: " , second_section_time)
     })
 
@@ -73,7 +71,7 @@ $(document).ready(function() {
        start_three_hundreds = e.timeStamp;
        // var formatted_time = Date(start);
     });
-    $(".metrics").on('click', function(e) {
+    $(".exit").on('click', function(e) {
       third_section_time += (e.timeStamp - start_three_hundreds) / 1000;
       console.log("Time spent in 3rd section: " , third_section_time)
     })
@@ -87,7 +85,15 @@ $(document).ready(function() {
   			"Time spent in 2nd section: " + second_section_time + '<br/>' +
   			"Time spent in 3rd section: " + third_section_time + '<br/>' +
   			"Percent of page viewed: " + scrollPercent + '%<br/>' +
-  			"Number of pixels traversed: " + counter
+  			"Number of pixels traversed: " + counter + '<br/>' +
+
+        "<div id='vertgraph'>" +
+          "<ul>" +
+              "<li class='one' style='height:" + (first_section_time * 20) + "px;'>" + Math.round(first_section_time) + "</li>" +
+              "<li class='two' style='height:" + (second_section_time * 20) + "px;'>" + Math.round(second_section_time) + "</li>" +
+              "<li class='three' style='height:" + (third_section_time * 20) + "px;'>" + Math.round(third_section_time) + "</li>" +
+          "</ul>" +
+        "</div>"
   		)	
   	})
 
